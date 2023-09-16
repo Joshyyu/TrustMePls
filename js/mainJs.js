@@ -9,11 +9,13 @@ const joshText = document.getElementById("joshText"); // Get the "Josh" text ele
 // Function to toggle the flashing border effect
 function toggleFlashingBorder() {
     button.classList.toggle("flashing-border");
+    console.log("Toggled flashing border.");
 }
 
 // Function to toggle the flashing lights background
 function toggleFlashingLights() {
     document.body.classList.toggle("flashing-lights");
+    console.log("Toggled flashing lights.");
 }
 
 // Function to fade in the audio
@@ -28,47 +30,64 @@ function fadeInAudio() {
             audio.volume = 1; // Ensure the volume is at maximum
         }
     }, 100); // Adjust the interval for desired smoothness
+    console.log("Fading in audio.");
 }
 
 // Function to apply the zoom and fade-in effect to the background
 function zoomFadeInBackground() {
     flashingBackground.style.animation = "zoomFadeIn 3s forwards";
+    console.log("Applied zoom and fade-in effect to background.");
 }
 
 // Function to apply the zoom and fade-in effect to the image
 function zoomFadeInImage() {
     image.style.animation = "zoomFadeIn 3s forwards";
+    console.log("Applied zoom and fade-in effect to image.");
 }
 
 // Function to show the text
 function showText() {
     text.style.display = "block";
+    console.log("Displayed text.");
 }
 
 // Add a click event listener to the button
 button.addEventListener("click", function () {
     // Hide the button
     button.style.display = "none";
+    console.log("Hid button.");
+    
     // Show the image
     image.style.display = "block";
+    console.log("Displayed image.");
+    
     // Toggle the flashing border effect
     toggleFlashingBorder();
+    
     // Toggle the flashing lights background
     toggleFlashingLights();
+    
     // Set audio volume to 0 before playing
     audio.volume = 0;
+    
     // Play the audio
     audio.play();
+    
     // Fade in the audio
     fadeInAudio();
+    
     // Loop the audio
     audio.loop = true;
+    
     // Apply the zoom and fade-in effect to the background when the button is clicked
     zoomFadeInBackground();
+    
     // Apply the zoom and fade-in effect to the image when the button is clicked
     zoomFadeInImage();
+    
     // Show the text when the button is clicked
     showText();
+    
     // Show the "Josh" text when the button is clicked
     joshText.style.display = "block";
 });
