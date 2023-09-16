@@ -1,0 +1,120 @@
+/* Add a class for the flashing lights background */
+.flashing-lights {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: flashLights 6s infinite;
+    z-index: -1; /* Place it behind other content */
+}
+
+@keyframes flashLights {
+    0% {
+        background: red;
+    }
+    10% {
+        background: #c58000;
+    }
+    20% {
+        background: #bebe2b;
+    }
+    30% {
+        background: green;
+    }
+    40% {
+        background: #039d9d;
+    }
+    50% {
+        background: blue;
+    }
+    60% {
+        background: purple;
+    }
+    70% {
+        background: magenta;
+    }
+    80% {
+        background: #b06774;
+    }
+    90% {
+        background: brown;
+    }
+    100% {
+        background: red;
+    }
+}
+
+/* Add the zoomFadeIn animation */
+@keyframes zoomFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.9);
+    }
+}
+
+/* Custom CSS for the flashing background */
+.flashing-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    z-index: -1; /* Place it behind other content */
+    animation: none; /* Initially, no animation */
+}
+
+/* Apply the zoomFadeIn animation to the .flashing-background class */
+.flashing-background.zoom-fade-in {
+    animation: zoomFadeIn 3s forwards;
+}
+
+/* Custom CSS to style the gradient button */
+.custom-gradient-button {
+    background: linear-gradient(to right, #ff8800, #a100ff);
+    border: 4px solid #000000;
+    color: black;
+    transition: border 0.3s; /* Add a transition for a smooth hover effect */
+    font-size: 180%; /* Increase button size by 20% */
+}
+
+.custom-gradient-button:hover {
+    border: 4px solid #5e5e5e; /* Change the border on hover */
+}
+
+/* Center the image using the "center-image" class */
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+/* Add the flashing border effect */
+.flashing-border {
+    animation: flash 1s infinite alternate;
+}
+
+/* Style the text in the bottom right corner */
+.bottom-right-text {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom as needed */
+    right: 10px; /* Adjust the distance from the right as needed */
+    font-size: 18px; /* Adjust the font size as needed */
+    color: white; /* Text color */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Style the text */
+.text {
+    margin-top: 10%;
+    font-weight: bold; /* Make text bold */
+    font-size: 222%; /* Increase text size by 12% */
+}
+
+body {
+    background-color: #89eed6;
+}

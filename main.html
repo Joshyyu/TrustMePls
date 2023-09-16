@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do You Trust me?</title>
+    <!-- Add Favicon -->
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <!-- Add Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link to your external stylesheet in the "css" folder -->
+    <link rel="stylesheet" href="css/mainStyle.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-12 text-center">
+            <!-- Add the custom class for the gradient button and the flashing-border class -->
+            <button id="myButton" class="btn custom-gradient-button flashing-border">I am Safe!</button>
+            <!-- Center the "otter.gif" image using the "center-image" class -->
+            <div class="center-image">
+                <img id="myImage" src="images/otter.gif" alt="Cute Otter" style="display: none;">
+            </div>
+            <!-- Add the audio element -->
+            <audio id="myAudio">
+                <source src="sound/otter.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <!-- Add the flashing background element -->
+            <div id="flashingBackground" class="flashing-background">
+                <!-- Add the TEXT -->
+                <div id="text" class="text" style="display: none;">
+                    DANCING OTTER FOR YOU :3
+                </div>
+            </div>
+            <!-- Add the text in the bottom right corner -->
+            <div class="bottom-right-text" id="joshText">Josh</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Bootstrap JS (optional) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Link to your external JavaScript file -->
+<script src="js/mainJS.js"></script>
+</body>
+</html>
